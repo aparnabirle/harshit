@@ -3,21 +3,61 @@
 
 <head>
 
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Harshit Choubey | Video Editor</title>
+
+<!-- SEO Meta Tags -->
+
+<meta name="description" content="Harshit Choubey is a professional video editor from India specializing in YouTube editing, Instagram Reels, motion graphics, AI content, cinematic storytelling, and retention-focused videos for creators and brands.">
+
+<meta name="keywords" content="Harshit Choubey, Video Editor, YouTube Video Editor, Instagram Reel Editor, Motion Graphics Editor, Freelance Video Editor India, Premiere Pro Editor, After Effects Editor, AI Video Editor, YouTube Shorts Editor, Content Creator Editor, Cinematic Video Editor, Retention Focused Editor, Social Media Video Editor, Adobe Premiere Pro, Video Editing Portfolio">
+
+<meta name="author" content="Harshit Choubey">
+
+<meta name="robots" content="index, follow">
+
+<meta name="theme-color" content="#0f1115">
+
+<!-- Open Graph -->
+
+<meta property="og:title" content="Harshit Choubey | Video Editor Portfolio">
+
+<meta property="og:description" content="Professional YouTube and Instagram video editor specializing in motion graphics, AI content, cinematic storytelling, and retention-focused editing.">
+
+<meta property="og:type" content="website">
+
+<meta property="og:url" content="https://harshitvideoeditor.vercel.app/">
+
+<meta property="og:image" content="https://harshitvideoeditor.vercel.app/images/favicon.png">
+
+<!-- Twitter -->
+
+<meta name="twitter:card" content="summary_large_image">
+
+<meta name="twitter:title" content="Harshit Choubey | Video Editor">
+
+<meta name="twitter:description" content="Professional video editor for YouTube, Instagram, AI content, motion graphics, and cinematic storytelling.">
+
+<meta name="twitter:image" content="https://harshitvideoeditor.vercel.app/images/favicon.png">
+
+<!-- Favicon -->
+
+<link rel="icon" type="image/png" href="images/favicon.png">
+
+<link rel="apple-touch-icon" href="images/favicon.png">
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 
 :root{
-  --bg:#101114;
-  --card:#18191d;
+  --bg:#0f1115;
+  --card:#17191f;
   --border:rgba(255,255,255,0.08);
   --text:#f5f5f5;
-  --muted:#9b9b9b;
+  --muted:#9d9d9d;
 }
 
 *{
@@ -41,8 +81,8 @@ body::before{
   content:'';
   position:fixed;
   inset:0;
+  opacity:0.03;
   pointer-events:none;
-  opacity:0.025;
   background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
@@ -58,8 +98,12 @@ a{
 }
 
 img{
-  max-width:100%;
+  width:100%;
   display:block;
+}
+
+section{
+  padding:110px 0;
 }
 
 @keyframes fadeUp{
@@ -78,51 +122,83 @@ img{
     transform:translateY(0px);
   }
   50%{
-    transform:translateY(-8px);
+    transform:translateY(-10px);
   }
   100%{
     transform:translateY(0px);
   }
 }
 
-section{
-  animation:fadeUp 0.8s ease;
-}
-
-nav{
+.navbar{
   position:sticky;
   top:0;
   z-index:999;
-  backdrop-filter:blur(12px);
-  background:rgba(16,17,20,0.9);
-  border-bottom:1px solid var(--border);
+  backdrop-filter:blur(14px);
+  background:rgba(15,17,21,0.88);
+  border-bottom:1px solid rgba(255,255,255,0.06);
 }
 
 .nav-inner{
-  height:80px;
+  height:82px;
   display:flex;
   align-items:center;
   justify-content:space-between;
+  gap:30px;
 }
 
 .logo{
   font-size:18px;
   font-weight:700;
+  letter-spacing:-0.5px;
 }
 
 .nav-links{
   display:flex;
-  gap:30px;
+  align-items:center;
+  gap:26px;
 }
 
 .nav-links a{
+  position:relative;
   font-size:14px;
   color:var(--muted);
-  transition:0.25s ease;
+  transition:0.3s ease;
+}
+
+.nav-links a::after{
+  content:'';
+  position:absolute;
+  left:0;
+  bottom:-8px;
+  width:0%;
+  height:2px;
+  background:#fff;
+  transition:0.3s ease;
 }
 
 .nav-links a:hover{
   color:#fff;
+}
+
+.nav-links a:hover::after{
+  width:100%;
+}
+
+.nav-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:12px 20px;
+  border-radius:12px;
+  background:#fff;
+  color:#000;
+  font-size:14px;
+  font-weight:600;
+  transition:0.3s ease;
+}
+
+.nav-btn:hover{
+  transform:translateY(-3px);
 }
 
 .btn{
@@ -142,7 +218,7 @@ nav{
 }
 
 .btn-primary:hover{
-  transform:translateY(-3px);
+  transform:translateY(-4px);
 }
 
 .btn-outline{
@@ -151,11 +227,11 @@ nav{
 
 .btn-outline:hover{
   border-color:#fff;
-  transform:translateY(-3px);
+  transform:translateY(-4px);
 }
 
 .hero{
-  padding:120px 0 90px;
+  padding-top:120px;
 }
 
 .hero-grid{
@@ -171,11 +247,10 @@ nav{
   gap:10px;
   padding:8px 16px;
   border-radius:999px;
-  background:#1b1c21;
+  background:#1c1e24;
   border:1px solid var(--border);
-  color:#d8d8d8;
-  font-size:12px;
   margin-bottom:26px;
+  font-size:12px;
 }
 
 .hero-badge::before{
@@ -187,30 +262,24 @@ nav{
 }
 
 .hero h1{
-  font-size:76px;
-  line-height:0.92;
+  font-size:78px;
+  line-height:0.95;
   letter-spacing:-4px;
   margin-bottom:24px;
 }
 
 .hero p{
   color:var(--muted);
-  font-size:17px;
   line-height:1.9;
-  max-width:640px;
+  font-size:17px;
+  max-width:620px;
 }
 
 .hero-actions{
   display:flex;
   gap:14px;
-  flex-wrap:wrap;
   margin-top:34px;
-}
-
-.mini-proof{
-  margin-top:18px;
-  font-size:14px;
-  color:var(--muted);
+  flex-wrap:wrap;
 }
 
 .hero-image{
@@ -218,27 +287,26 @@ nav{
 }
 
 .hero-image img{
-  width:100%;
+  border-radius:30px;
+  border:1px solid var(--border);
   aspect-ratio:4/5;
   object-fit:cover;
-  border-radius:28px;
-  border:1px solid var(--border);
 }
 
 .floating-card{
   position:absolute;
-  bottom:22px;
-  left:22px;
-  padding:18px 22px;
-  border-radius:20px;
-  background:rgba(15,15,15,0.88);
+  bottom:24px;
+  left:24px;
+  background:rgba(14,14,14,0.88);
   border:1px solid var(--border);
-  backdrop-filter:blur(12px);
+  padding:20px 24px;
+  border-radius:20px;
+  backdrop-filter:blur(10px);
   animation:float 4s ease-in-out infinite;
 }
 
 .floating-card h3{
-  font-size:30px;
+  font-size:36px;
 }
 
 .floating-card p{
@@ -247,7 +315,7 @@ nav{
 }
 
 .stats{
-  margin-top:70px;
+  margin-top:80px;
   display:grid;
   grid-template-columns:repeat(4,1fr);
   gap:18px;
@@ -257,7 +325,7 @@ nav{
   background:var(--card);
   border:1px solid var(--border);
   border-radius:24px;
-  padding:30px;
+  padding:32px;
   transition:0.3s ease;
 }
 
@@ -266,32 +334,54 @@ nav{
 }
 
 .stat-box h2{
-  font-size:40px;
-  margin-bottom:8px;
+  font-size:42px;
+  margin-bottom:10px;
 }
 
 .stat-box p{
   color:var(--muted);
 }
 
-.section{
-  padding:100px 0;
-}
-
 .section-title{
-  font-size:54px;
+  font-size:56px;
   letter-spacing:-2px;
-  margin-bottom:14px;
+  margin-bottom:16px;
 }
 
 .section-sub{
-  max-width:700px;
-  line-height:1.9;
   color:var(--muted);
+  max-width:720px;
+  line-height:1.9;
+}
+
+.filter-tabs{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  margin-top:40px;
+  margin-bottom:40px;
+}
+
+.tab-btn{
+  padding:12px 18px;
+  border-radius:999px;
+  background:#1a1b20;
+  border:1px solid var(--border);
+  color:#d5d5d5;
+  cursor:pointer;
+  transition:0.3s ease;
+}
+
+.tab-btn:hover{
+  transform:translateY(-2px);
+}
+
+.tab-btn.active{
+  background:#fff;
+  color:#000;
 }
 
 .work-grid{
-  margin-top:50px;
   display:grid;
   grid-template-columns:repeat(3,1fr);
   gap:24px;
@@ -303,46 +393,34 @@ nav{
   border-radius:24px;
   overflow:hidden;
   transition:0.35s ease;
+  animation:fadeUp 0.8s ease;
 }
 
 .work-card:hover{
   transform:translateY(-8px);
-  border-color:rgba(255,255,255,0.15);
 }
 
-.work-thumb{
-  position:relative;
+.video-frame iframe{
+  transition:0.4s ease;
 }
 
-.work-thumb img{
+.work-card:hover iframe{
+  transform:scale(1.02);
+}
+
+.work-card.hide{
+  display:none;
+}
+
+.video-frame{
   width:100%;
-  height:240px;
-  object-fit:cover;
+  aspect-ratio:16/9;
 }
 
-.play-overlay{
-  position:absolute;
-  inset:0;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-}
-
-.play-btn{
-  width:74px;
-  height:74px;
-  border-radius:50%;
-  background:rgba(0,0,0,0.6);
-  backdrop-filter:blur(8px);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:24px;
-  transition:0.3s ease;
-}
-
-.work-card:hover .play-btn{
-  transform:scale(1.08);
+.video-frame iframe{
+  width:100%;
+  height:100%;
+  border:none;
 }
 
 .work-content{
@@ -355,19 +433,19 @@ nav{
   border-radius:999px;
   border:1px solid var(--border);
   font-size:11px;
-  color:#d8d8d8;
   margin-bottom:14px;
+  color:#d8d8d8;
 }
 
 .work-content h3{
   font-size:22px;
-  margin-bottom:10px;
 }
 
 .work-content p{
+  margin-top:12px;
   color:var(--muted);
+  line-height:1.7;
   font-size:14px;
-  line-height:1.8;
 }
 
 .timeline{
@@ -382,11 +460,6 @@ nav{
   border:1px solid var(--border);
   border-radius:24px;
   padding:34px;
-  transition:0.3s ease;
-}
-
-.timeline-card:hover{
-  transform:translateY(-6px);
 }
 
 .timeline-top{
@@ -409,37 +482,7 @@ nav{
 .timeline-card ul{
   padding-left:18px;
   line-height:1.9;
-  color:#d7d7d7;
-}
-
-.process-grid{
-  margin-top:50px;
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:20px;
-}
-
-.process-card{
-  background:var(--card);
-  border:1px solid var(--border);
-  border-radius:24px;
-  padding:28px;
-  transition:0.3s ease;
-}
-
-.process-card:hover{
-  transform:translateY(-6px);
-}
-
-.process-card h3{
-  font-size:20px;
-  margin-bottom:12px;
-}
-
-.process-card p{
-  color:var(--muted);
-  line-height:1.8;
-  font-size:14px;
+  color:#d8d8d8;
 }
 
 .skills-grid{
@@ -473,13 +516,8 @@ nav{
   gap:12px;
   padding:12px 16px;
   border-radius:16px;
+  background:#1d1f25;
   border:1px solid var(--border);
-  background:#1d1e22;
-  transition:0.3s ease;
-}
-
-.skill-item:hover{
-  transform:translateY(-4px);
 }
 
 .skill-item img{
@@ -489,15 +527,15 @@ nav{
 }
 
 .resume-box{
-  background:#15161a;
+  background:#15171c;
   border:1px solid var(--border);
-  border-radius:30px;
+  border-radius:32px;
   padding:70px;
   text-align:center;
 }
 
 .resume-box h2{
-  font-size:56px;
+  font-size:58px;
   margin-bottom:18px;
 }
 
@@ -532,7 +570,7 @@ nav{
 }
 
 .contact-card:hover{
-  transform:translateY(-6px);
+  transform:translateY(-4px);
 }
 
 .contact-card small{
@@ -543,13 +581,12 @@ nav{
 
 .contact-card h4{
   font-size:15px;
-  word-break:break-word;
+  white-space:nowrap;
 }
 
 footer{
   border-top:1px solid var(--border);
   padding:30px 0;
-  margin-top:80px;
 }
 
 .footer-inner{
@@ -582,29 +619,28 @@ footer{
   grid-template-columns:1fr 1fr;
 }
 
-.process-grid{
-  grid-template-columns:1fr 1fr;
-}
-
 .skills-grid{
   grid-template-columns:1fr;
 }
 
-.contact-grid{
-  grid-template-columns:1fr 1fr;
+}
+
+@media(max-width:850px){
+
+.nav-inner{
+  height:auto;
+  padding:20px 0;
+  flex-direction:column;
+}
+
+.nav-links{
+  flex-wrap:wrap;
+  justify-content:center;
 }
 
 }
 
 @media(max-width:700px){
-
-.nav-links{
-  display:none;
-}
-
-.hero{
-  padding-top:70px;
-}
 
 .hero h1{
   font-size:42px;
@@ -612,12 +648,11 @@ footer{
 }
 
 .section-title{
-  font-size:38px;
+  font-size:40px;
 }
 
 .work-grid,
 .stats,
-.process-grid,
 .contact-grid{
   grid-template-columns:1fr;
 }
@@ -627,12 +662,11 @@ footer{
 }
 
 .resume-box h2{
-  font-size:38px;
+  font-size:40px;
 }
 
 .hero-actions{
   flex-direction:column;
-  align-items:flex-start;
 }
 
 .btn{
@@ -647,562 +681,788 @@ footer{
 
 <body>
 
-<nav>
+<nav class="navbar">
 
-  <div class="container nav-inner">
+<div class="container nav-inner">
 
-    <div class="logo">
-      Harshit Choubey
-    </div>
+<a href="#" class="logo">
+Harshit Choubey
+</a>
 
-    <div class="nav-links">
-      <a href="#work">Work</a>
-      <a href="#experience">Experience</a>
-      <a href="#process">Process</a>
-      <a href="#skills">Skills</a>
-      <a href="#contact">Contact</a>
-    </div>
+<div class="nav-links">
+<a href="#work">Work</a>
+<a href="#experience">Experience</a>
+<a href="#skills">Skills</a>
+<a href="#resume">Resume</a>
+<a href="#contact">Contact</a>
+</div>
 
-  </div>
+<a href="/Harshit_Choubey_Resume.pdf" download class="nav-btn">
+Download Resume
+</a>
+
+</div>
 
 </nav>
 
 <section class="hero">
 
-  <div class="container hero-grid">
+<div class="container hero-grid">
 
-    <div>
+<div>
 
-      <div class="hero-badge">
-        Open to Full Time Opportunities
-      </div>
+<div class="hero-badge">
+Open To Full Time Opportunities
+</div>
 
-      <h1>
-        Editing Videos<br>
-        People Actually Watch
-      </h1>
+<h1>
+Editing Videos<br>
+People Actually Watch
+</h1>
 
-      <p>
-        Video editor specializing in YouTube, Instagram, cinematic edits, AI content, and retention-focused storytelling. Edited 600+ videos across creators, brands, travel, education, and AI-driven channels.
-      </p>
+<p>
+Video editor specializing in YouTube, Instagram, cinematic storytelling, AI content, motion graphics, and retention-focused editing for creators and brands.
+</p>
 
-      <div class="hero-actions">
+<div class="hero-actions">
 
-        <a href="#work" class="btn btn-primary">
-          View Portfolio
-        </a>
+<a href="#work" class="btn btn-primary">
+View Portfolio
+</a>
 
-        <a href="/Harshit_Choubey_Resume.pdf" download class="btn btn-outline">
-          Download Resume
-        </a>
+<a href="/Harshit_Choubey_Resume.pdf" download class="btn btn-outline">
+Download Resume
+</a>
 
-      </div>
+</div>
 
-      <p class="mini-proof">
-        Worked with creators, AI brands, travel channels, and educational platforms.
-      </p>
+</div>
 
-    </div>
+<div class="hero-image">
 
-    <div class="hero-image">
+<img src="images/harshit.png" alt="Harshit Choubey">
 
-      <!-- PROFILE IMAGE -->
-      <!-- Replace with your own image -->
-      <img src="images/harshitpic.png" alt="Harshit Choubey">
+<div class="floating-card">
+<h3>600+</h3>
+<p>Videos Edited</p>
+</div>
 
-      <div class="floating-card">
-        <h3>600+</h3>
-        <p>Videos Edited</p>
-      </div>
+</div>
 
-    </div>
+</div>
 
-  </div>
+<div class="container">
 
-  <div class="container">
+<div class="stats">
 
-    <div class="stats">
+<div class="stat-box">
+<h2>1M+</h2>
+<p>Monthly Reach</p>
+</div>
 
-      <div class="stat-box">
-        <h2>1M+</h2>
-        <p>Monthly Channel Reach</p>
-      </div>
+<div class="stat-box">
+<h2>58%</h2>
+<p>Peak Retention</p>
+</div>
 
-      <div class="stat-box">
-        <h2>58%</h2>
-        <p>Peak Audience Retention</p>
-      </div>
+<div class="stat-box">
+<h2>4+</h2>
+<p>Years Experience</p>
+</div>
 
-      <div class="stat-box">
-        <h2>4+</h2>
-        <p>Years Experience</p>
-      </div>
+<div class="stat-box">
+<h2>10+</h2>
+<p>Creators & Brands</p>
+</div>
 
-      <div class="stat-box">
-        <h2>10+</h2>
-        <p>Creators & Brands</p>
-      </div>
+</div>
 
-    </div>
-
-  </div>
+</div>
 
 </section>
 
-<section class="section" id="work">
+<section id="work">
 
-  <div class="container">
+<div class="container">
 
-    <h2 class="section-title">
-      Featured Work
-    </h2>
+<h2 class="section-title">
+Featured Work
+</h2>
 
-    <p class="section-sub">
-      High-retention edits, cinematic storytelling, short-form reels, and AI-driven content production.
-    </p>
+<p class="section-sub">
+Motion graphics, short-form content, long-form storytelling, and visual motion design projects.
+</p>
 
-    <div class="work-grid">
+<div class="filter-tabs">
 
-      <a href="https://youtu.be/VIDEO_LINK" target="_blank" class="work-card">
+<button class="tab-btn active" data-filter="all">All</button>
+<button class="tab-btn" data-filter="motion">Motion Graphics</button>
+<button class="tab-btn" data-filter="shorts">Shorts & Reels</button>
+<button class="tab-btn" data-filter="longform">Long Form</button>
+<button class="tab-btn" data-filter="visual">Visual Motion Design</button>
 
-        <div class="work-thumb">
+</div>
 
-          <!-- THUMBNAIL -->
-          <img src="images/thumb1.jpg" alt="AI Video Thumbnail">
+<div class="work-grid">
 
-          <div class="play-overlay">
-            <div class="play-btn">▶</div>
-          </div>
+<!-- 1 -->
+<div class="work-card motion">
+<div class="video-frame">
+<iframe
+src="https://www.youtube-nocookie.com/embed/vBKX4-B23_s?rel=0"
+title="Business & Cash Flow Explainer | Corporate Motion Graphics"
+frameborder="0"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+referrerpolicy="strict-origin-when-cross-origin"
+allowfullscreen>
+</iframe>
+</div>
 
-        </div>
+<div class="work-content">
+<div class="work-tag">Motion Graphics</div>
 
-        <div class="work-content">
+<h3>
+Business & Cash Flow Explainer | Corporate Motion Graphics
+</h3>
 
-          <div class="work-tag">
-            AI Content
-          </div>
+<p>
+This video was created for an international client, explaining business and cash flow concepts. Clean graphics were used to match the brand guidelines and maintain a professional look. A Pac-Man-style animation at the end stood out and was highly appreciated by the client.
+</p>
 
-          <h3>
-            AI Avatar Video
-          </h3>
+</div>
+</div>
 
-          <p>
-            Fast-paced AI content using captions, motion graphics, and retention-focused editing.
-          </p>
+<!-- 2 -->
+<div class="work-card motion">
+<div class="video-frame">
+<iframe
+src="https://www.youtube-nocookie.com/embed/BkxmJANsmXo?rel=0"
+title="Direct Hotel Booking Animation | Motion Graphics Showcase"
+frameborder="0"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+referrerpolicy="strict-origin-when-cross-origin"
+allowfullscreen>
+</iframe>
+</div>
 
-        </div>
+<div class="work-content">
+<div class="work-tag">Motion Graphics</div>
 
-      </a>
+<h3>
+Direct Hotel Booking Animation | Motion Graphics Showcase
+</h3>
 
-      <a href="https://youtu.be/VIDEO_LINK" target="_blank" class="work-card">
+<p>
+This animation was created to show how direct hotel booking saves time and money. It explains the concept visually without using a voiceover, relying on motion and clarity. It was also used as a sample to showcase my motion graphics skills to a client.
+</p>
 
-        <div class="work-thumb">
+</div>
+</div>
 
-          <!-- THUMBNAIL -->
-          <img src="images/thumb2.jpg" alt="Travel Edit Thumbnail">
+<!-- 3 -->
+<div class="work-card shorts">
+<div class="video-frame">
+<iframe
+src="https://www.youtube-nocookie.com/embed/uVz1IEXehIs?rel=0"
+title="Why Governments Can’t Print Unlimited Money | Explainer Video"
+frameborder="0"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+referrerpolicy="strict-origin-when-cross-origin"
+allowfullscreen>
+</iframe>
+</div>
 
-          <div class="play-overlay">
-            <div class="play-btn">▶</div>
-          </div>
+<div class="work-content">
+<div class="work-tag">Shorts & Reels</div>
 
-        </div>
+<h3>
+Why Governments Can’t Print Unlimited Money | Explainer Video
+</h3>
 
-        <div class="work-content">
+<p>
+This video was created for content creator Yuvraj Wadhwani, explaining why the government cannot print unlimited money using clear “pizza effect” visuals. Strong use of animation made the concept easy to understand, and it received solid appreciation from the client.
+</p>
 
-          <div class="work-tag">
-            Travel
-          </div>
+</div>
+</div>
 
-          <h3>
-            Cinematic Travel Edit
-          </h3>
+<!-- 4 -->
+<div class="work-card shorts">
+<div class="video-frame">
+<iframe
+src="https://www.youtube-nocookie.com/embed/6pIacnG6gpk?rel=0"
+title="AI Avatar Video Creation | HeyGen + Motion Graphics Workflow"
+frameborder="0"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+referrerpolicy="strict-origin-when-cross-origin"
+allowfullscreen>
+</iframe>
+</div>
 
-          <p>
-            Cinematic pacing, storytelling, transitions, and premium color grading.
-          </p>
+<div class="work-content">
+<div class="work-tag">Shorts & Reels</div>
 
-        </div>
+<h3>
+AI Avatar Video Creation | HeyGen + Motion Graphics Workflow
+</h3>
 
-      </a>
+<p>
+This video was fully created using HeyGen. In my workflow, I use HeyGen to create the avatar, build the complete video around it, and then enhance it with suitable graphics, motion elements, and editing to make the final output more engaging and visually appealing.
+</p>
+<p>
+The video performed well, received appreciation from the founder, and these types of videos are currently being posted on the company’s page.
+</p>
 
-      <a href="https://youtu.be/VIDEO_LINK" target="_blank" class="work-card">
+</div>
+</div>
 
-        <div class="work-thumb">
+<!-- 5 -->
+<div class="work-card shorts">
+<div class="video-frame">
+<iframe
+src="https://www.youtube-nocookie.com/embed/gLciWpy598Y?rel=0"
+title="App Promo Ad Video | End-to-End Creative Production"
+frameborder="0"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+referrerpolicy="strict-origin-when-cross-origin"
+allowfullscreen>
+</iframe>
+</div>
 
-          <!-- THUMBNAIL -->
-          <img src="images/thumb3.jpg" alt="Reels Thumbnail">
+<div class="work-content">
+<div class="work-tag">Shorts & Reels</div>
 
-          <div class="play-overlay">
-            <div class="play-btn">▶</div>
-          </div>
+<h3>
+App Promo Ad Video | End-to-End Creative Production
+</h3>
 
-        </div>
+<p>
+I edited this video from scratch, handling everything from scripting and ideation to visuals and voiceover. The client only asked for an ad video for their app, so I built the entire piece based on that brief, and it received positive feedback from them.
+</p>
 
-        <div class="work-content">
+</div>
+</div>
 
-          <div class="work-tag">
-            Short Form
-          </div>
+<!-- 6 -->
+<div class="work-card shorts">
+<div class="video-frame">
+<iframe
+src="https://www.youtube-nocookie.com/embed/Gnq_yi1NJf0?rel=0"
+title="Travel App Ad Campaign | 30K+ Instagram Views"
+frameborder="0"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+referrerpolicy="strict-origin-when-cross-origin"
+allowfullscreen>
+</iframe>
+</div>
 
-          <h3>
-            Retention Focused Reel
-          </h3>
+<div class="work-content">
+<div class="work-tag">Shorts & Reels</div>
 
-          <p>
-            Hook-first editing optimized for audience engagement and higher watch time.
-          </p>
+<h3>
+Travel App Ad Campaign | 30K+ Instagram Views
+</h3>
 
-        </div>
+<p>
+This video was edited for Join Habibi’s travel Instagram page as an advertisement campaign, encouraging users to book their adventure rides through the JHB app whenever they travel.
+</p>
+<p>
+The video performed well and received more than 30,000 views on Instagram.
+</p>
 
-      </a>
+</div>
+</div>
 
-    </div>
+<!-- 7 -->
+<div class="work-card shorts">
+<div class="video-frame">
+<iframe
+src="https://www.youtube-nocookie.com/embed/_bcXEt7Mu0Q?rel=0"
+title="Digital Marketing Course Promo | Fast-Paced Motion Edit"
+frameborder="0"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+referrerpolicy="strict-origin-when-cross-origin"
+allowfullscreen>
+</iframe>
+</div>
 
-  </div>
+<div class="work-content">
+<div class="work-tag">Shorts & Reels</div>
+
+<h3>
+Digital Marketing Course Promo | Fast-Paced Motion Edit
+</h3>
+
+<p>
+This video was created for digital marketing courses, showcasing each course through slides to make it clear what each one offers. To build a strong visual hook, I used blur effects and fast cuts to keep it engaging. It received good appreciation.
+</p>
+
+</div>
+</div>
+
+<!-- 8 -->
+<div class="work-card shorts">
+<div class="video-frame">
+<iframe
+src="https://www.youtube-nocookie.com/embed/WeuluUP6KG8?rel=0"
+title="Viral Podcast Edit | 800K+ Views Strategy"
+frameborder="0"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+referrerpolicy="strict-origin-when-cross-origin"
+allowfullscreen>
+</iframe>
+</div>
+
+<div class="work-content">
+<div class="work-tag">Shorts & Reels</div>
+
+<h3>
+Viral Podcast Edit | 800K+ Views Strategy
+</h3>
+
+<p>
+I edited this video for Divya Jain as a podcast clip. In this piece, I used my go-to tactic for virality: adding movie clips instead of random B-roll and using a square format to keep titles on screen throughout. It reached 800K+ views and delivered strong results.
+</p>
+
+</div>
+</div>
+
+<!-- 9 -->
+<div class="work-card longform">
+<div class="video-frame">
+<iframe
+src="https://www.youtube-nocookie.com/embed/epa9YE_NxnA?rel=0"
+title="Documentary-Style YouTube Edit | Cinematic Storytelling & Motion Graphics"
+frameborder="0"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+referrerpolicy="strict-origin-when-cross-origin"
+allowfullscreen>
+</iframe>
+</div>
+
+<div class="work-content">
+<div class="work-tag">Long Form</div>
+
+<h3>
+Documentary-Style YouTube Edit | Cinematic Storytelling & Motion Graphics
+</h3>
+
+<p>
+This is a documentary-style YouTube video edited for Suheb Ahmad, a Dubai-based YouTuber. I created the intro for the video and enhanced the overall storytelling using cinematic visuals, newspaper-style effects, motion graphics, and engaging editing techniques to make the content more immersive and interesting.
+</p>
+<p>
+The video received a good amount of appreciation from the client for its overall presentation and editing quality.
+</p>
+
+</div>
+</div>
+
+<!-- 10 -->
+<div class="work-card visual">
+<div class="video-frame">
+<iframe
+src="https://www.youtube-nocookie.com/embed/KskyKPJKYio?rel=0"
+title="Documentary Motion Design"
+frameborder="0"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+referrerpolicy="strict-origin-when-cross-origin"
+allowfullscreen>
+</iframe>
+</div>
+
+<div class="work-content">
+<div class="work-tag">Visual Motion Design</div>
+
+<h3>
+Documentary Motion Design
+</h3>
+
+<p>
+Documentary-inspired animation project using typography and cinematic motion design transitions.
+</p>
+
+</div>
+</div>
+
+<!-- 11 -->
+<div class="work-card visual">
+<div class="video-frame">
+<iframe
+src="https://www.youtube-nocookie.com/embed/r4k6urINePU?rel=0"
+title="Physics Motion Animation"
+frameborder="0"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+referrerpolicy="strict-origin-when-cross-origin"
+allowfullscreen>
+</iframe>
+</div>
+
+<div class="work-content">
+<div class="work-tag">Visual Motion Design</div>
+
+<h3>
+Physics Motion Animation
+</h3>
+
+<p>
+Motion design study showcasing realistic movement, smooth timing, and animation fundamentals.
+</p>
+
+</div>
+</div>
+
+<!-- 12 -->
+<div class="work-card visual">
+<div class="video-frame">
+<iframe
+src="https://www.youtube-nocookie.com/embed/C6DQbeJ9FRM?rel=0"
+title="Modern UI Motion Design"
+frameborder="0"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+referrerpolicy="strict-origin-when-cross-origin"
+allowfullscreen>
+</iframe>
+</div>
+
+<div class="work-content">
+<div class="work-tag">Visual Motion Design</div>
+
+<h3>
+Modern UI Motion Design
+</h3>
+
+<p>
+Clean interface animation focused on smooth transitions and polished user interaction design.
+</p>
+
+</div>
+</div>
+
+<!-- 13 -->
+<div class="work-card visual">
+<div class="video-frame">
+<iframe
+src="https://www.youtube-nocookie.com/embed/WI2j3h0ZhzQ?rel=0"
+title="Business Motion Graphics"
+frameborder="0"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+referrerpolicy="strict-origin-when-cross-origin"
+allowfullscreen>
+</iframe>
+</div>
+
+<div class="work-content">
+<div class="work-tag">Visual Motion Design</div>
+
+<h3>
+Business Motion Graphics
+</h3>
+
+<p>
+Business-focused motion graphics project combining typography animation and visual storytelling.
+</p>
+
+</div>
+</div>
+
+</div>
+
+</div>
 
 </section>
 
-<section class="section" id="experience">
+<section id="experience">
 
-  <div class="container">
+<div class="container">
 
-    <h2 class="section-title">
-      Experience
-    </h2>
+<h2 class="section-title">
+Experience
+</h2>
 
-    <p class="section-sub">
-      Editing experience across agencies, creator brands, YouTube channels, and freelance projects.
-    </p>
+<p class="section-sub">
+Worked with creators, agencies, brands, education channels, and AI businesses across YouTube and Instagram.
+</p>
 
-    <div class="timeline">
+<div class="timeline">
 
-      <div class="timeline-card">
+<div class="timeline-card">
 
-        <div class="timeline-top">
+<div class="timeline-top">
+<div>
+<h3>Korvage Information Technology</h3>
+<span>Video Editor</span>
+</div>
+<span>Jan 2026 – Present</span>
+</div>
 
-          <div>
-            <h3>Korvage Information Technology</h3>
-            <span>Video Editor</span>
-          </div>
+<ul>
+<li>Edited 40+ travel content for Join Habibi across YouTube and Instagram.</li>
+<li>Created 25+ AI avatar videos using HeyGen and ElevenLabs.</li>
+<li>Produced 60+ AI tools-based videos for YouTube and Reels.</li>
+<li>Edited 30+ education videos for Edukonn.</li>
+<li>Delivered 8–12 videos weekly while maintaining quality and deadlines.</li>
+</ul>
 
-          <span>Jan 2026 – Present</span>
+</div>
 
-        </div>
+<div class="timeline-card">
 
-        <ul>
-          <li>Edited cinematic travel content for Join Habibi.</li>
-          <li>Created AI avatar videos using HeyGen and ElevenLabs.</li>
-          <li>Produced AI tools-based content for YouTube and Instagram.</li>
-          <li>Delivered 8–12 videos weekly with fast turnaround.</li>
-        </ul>
+<div class="timeline-top">
+<div>
+<h3>Fantasygram Studio</h3>
+<span>Video Editor</span>
+</div>
+<span>Nov 2022 – Aug 2025</span>
+</div>
 
-      </div>
+<ul>
+<li>Edited 500+ cricket videos for YouTube and Instagram.</li>
+<li>Contributed to 1M+ monthly views on the channel.</li>
+<li>Improved audience retention from 34% to 58%.</li>
+<li>Produced long-form videos, Reels, and live-stream content.</li>
+</ul>
 
-      <div class="timeline-card">
+</div>
 
-        <div class="timeline-top">
+<div class="timeline-card">
 
-          <div>
-            <h3>Fantasygram Studio</h3>
-            <span>Video Editor</span>
-          </div>
+<div class="timeline-top">
+<div>
+<h3>Freelance Video Editor</h3>
+<span>Self Employed</span>
+</div>
+<span>Mar 2022 – Jan 2026</span>
+</div>
 
-          <span>Nov 2022 – Aug 2025</span>
+<ul>
+<li>Delivered 100+ videos for YouTube and Instagram creators.</li>
+<li>Worked with 10+ creators including Rapid Rashmi, Suheb Ahmad, and CA Ritu Agarwal.</li>
+<li>Focused on storytelling, pacing, and retention-driven editing.</li>
+</ul>
 
-        </div>
+</div>
 
-        <ul>
-          <li>Edited 500+ videos for YouTube and Instagram.</li>
-          <li>Worked with 10+ creators and brands.</li>
-          <li>Improved retention from 34% to 58%.</li>
-          <li>Produced high-performing reels and long-form content.</li>
-        </ul>
+</div>
 
-      </div>
-
-      <div class="timeline-card">
-
-        <div class="timeline-top">
-
-          <div>
-            <h3>Freelance Video Editor</h3>
-            <span>Freelance</span>
-          </div>
-
-          <span>Mar 2022 – Jan 2026</span>
-
-        </div>
-
-        <ul>
-          <li>Delivered 100+ videos for creators and brands.</li>
-          <li>Collaborated with Rapid Rashmi, Suheb Ahmad, CA Ritu Agarwal, and others.</li>
-          <li>Focused on storytelling, pacing, and cinematic color grading.</li>
-          <li>Maintained fast turnaround with consistent editing quality.</li>
-        </ul>
-
-      </div>
-
-    </div>
-
-  </div>
+</div>
 
 </section>
 
-<section class="section" id="process">
+<section id="skills">
 
-  <div class="container">
+<div class="container">
 
-    <h2 class="section-title">
-      Editing Process
-    </h2>
+<h2 class="section-title">
+Skills & Tools
+</h2>
 
-    <p class="section-sub">
-      Every edit is optimized for attention, pacing, storytelling, and audience retention.
-    </p>
+<p class="section-sub">
+Professional editing workflow built around storytelling, speed, retention, and visual quality.
+</p>
 
-    <div class="process-grid">
+<div class="skills-grid">
 
-      <div class="process-card">
-        <h3>Hook & Retention</h3>
-        <p>
-          Strong opening seconds designed to stop scrolling and increase watch time.
-        </p>
-      </div>
+<div class="skill-box">
 
-      <div class="process-card">
-        <h3>Story Structure</h3>
-        <p>
-          Clean pacing and scene flow that keeps viewers engaged till the end.
-        </p>
-      </div>
+<h3>
+Editing Tools
+</h3>
 
-      <div class="process-card">
-        <h3>Sound Design</h3>
-        <p>
-          Layered music, transitions, and sound effects to improve emotional impact.
-        </p>
-      </div>
+<div class="skill-tags">
 
-      <div class="process-card">
-        <h3>Color Grading</h3>
-        <p>
-          Cinematic color correction and grading aligned with brand identity.
-        </p>
-      </div>
+<div class="skill-item">
+<img src="images/pr.webp" alt="pr">
+<span>Premiere Pro</span>
+</div>
 
-    </div>
+<div class="skill-item">
+<img src="logos/ae.webp" alt="ae">
+<span>After Effects</span>
+</div>
 
-  </div>
+<div class="skill-item">
+<img src="logos/ps.webp" alt="ps">
+<span>Photoshop</span>
+</div>
 
-</section>
+<div class="skill-item">
+<img src="logos/canva.webp" alt="canva">
+<span>Canva</span>
+</div>
 
-<section class="section" id="skills">
+</div>
 
-  <div class="container">
+</div>
 
-    <h2 class="section-title">
-      Skills & Tools
-    </h2>
+<div class="skill-box">
 
-    <p class="section-sub">
-      Professional editing and AI-assisted workflow built for modern content production.
-    </p>
+<h3>
+AI Workflow
+</h3>
 
-    <div class="skills-grid">
+<div class="skill-tags">
 
-      <div class="skill-box">
+<div class="skill-item">
+<img src="logos/heygen.webp" alt="heygen">
+<span>HeyGen</span>
+</div>
 
-        <h3>
-          Editing Tools
-        </h3>
+<div class="skill-item">
+<img src="logos/elevenlabs.webp" alt="elevenlabs">
+<span>ElevenLabs</span>
+</div>
 
-        <div class="skill-tags">
+<div class="skill-item">
+<img src="logos/midjourney.png" alt="midjourney">
+<span>Midjourney</span>
+</div>
 
-          <div class="skill-item">
-            <!-- LOGO -->
-            <img src="logos/pr.webp" alt="">
-            Adobe Premiere Pro
-          </div>
+<div class="skill-item">
+<img src="logos/gemini.png" alt="gemini">
+<span>Gemini</span>
+</div>
 
-          <div class="skill-item">
-            <!-- LOGO -->
-            <img src="logos/ae.webp" alt="">
-            Adobe After Effects
-          </div>
+<div class="skill-item">
+<img src="logos/meta.png" alt="meta">
+<span>Meta AI</span>
+</div>
 
-          <div class="skill-item">
-            <!-- LOGO -->
-            <img src="logos/ps.webp" alt="">
-            Adobe Photoshop
-          </div>
+<div class="skill-item">
+<img src="logos/chatgpt.jpg" alt="chatgpt">
+<span>ChatGPT</span>
+</div>
 
-          <div class="skill-item">
-            <!-- LOGO -->
-            <img src="logos/canva.webp" alt="">
-            Canva
-          </div>
 
-          <div class="skill-item">
-            <!-- LOGO -->
-            <img src="logos/obs.webp" alt="">
-            OBS Studio
-          </div>
+</div>
 
-        </div>
+</div>
 
-      </div>
+</div>
 
-      <div class="skill-box">
-
-        <h3>
-          AI Workflow
-        </h3>
-
-        <div class="skill-tags">
-
-          <div class="skill-item">
-            <!-- LOGO -->
-            <img src="logos/heygen.webp" alt="">
-            HeyGen
-          </div>
-
-          <div class="skill-item">
-            <!-- LOGO -->
-            <img src="logos/elevenlabs.webp" alt="">
-            ElevenLabs
-          </div>
-
-          <div class="skill-item">
-            <!-- LOGO -->
-            <img src="logos/midjourney.png" alt="">
-            Midjourney
-          </div>
-
-          <div class="skill-item">
-            <!-- LOGO -->
-            <img src="logos/gemini.png" alt="">
-            Gemini
-          </div>
-
-          <div class="skill-item">
-            <!-- LOGO -->
-            <img src="logos/meta.png" alt="">
-            Meta AI
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
+</div>
 
 </section>
 
-<section class="section">
+<section id="resume">
 
-  <div class="container">
+<div class="container">
 
-    <div class="resume-box">
+<div class="resume-box">
 
-      <h2>
-        Resume & Portfolio
-      </h2>
+<h2>
+Resume & Portfolio
+</h2>
 
-      <p>
-        Download the resume PDF or explore LinkedIn profile for more editing projects and experience.
-      </p>
+<p>
+Download the resume or connect directly for full-time video editing opportunities, creator collaborations, and agency work.
+</p>
 
-      <div class="resume-actions">
+<div class="resume-actions">
 
-        <a href="/Harshit_Choubey_Resume.pdf" download class="btn btn-primary">
-          Download Resume
-        </a>
+<a href="/Harshit-Choubey-Resume.pdf" download class="btn btn-primary">
+Download Resume
+</a>
 
-        <a href="https://linkedin.com/in/harshit-edits" target="_blank" class="btn btn-outline">
-          LinkedIn Profile
-        </a>
+<a href="#contact" class="btn btn-outline">
+Contact Me
+</a>
 
-      </div>
+</div>
 
-    </div>
+</div>
 
-  </div>
+</div>
 
 </section>
 
-<section class="section" id="contact">
+<section id="contact">
 
-  <div class="container">
+<div class="container">
 
-    <h2 class="section-title">
-      Contact
-    </h2>
+<h2 class="section-title">
+Contact
+</h2>
 
-    <p class="section-sub">
-      Open to remote full-time opportunities, creator teams, agencies, and media companies.
-    </p>
+<p class="section-sub">
+Available for full-time roles, remote opportunities, creator editing work, and agency collaborations.
+</p>
 
-    <div class="contact-grid">
+<div class="contact-grid">
 
-      <a href="mailto:harshitchoubey218@gmail.com" class="contact-card">
+<a href="mailto:harshitchoubey218@gmail.com" class="contact-card">
+<small>Email</small>
+<h4>harshitchoubey218@gmail.com</h4>
+</a>
 
-        <small>Email</small>
-        <h4>
-          harshitchoubey218@gmail.com
-        </h4>
+<a href="https://linkedin.com/in/harshit-edits/" target="_blank" class="contact-card">
+<small>LinkedIn</small>
+<h4>linkedin.com/in/harshit-edits</h4>
+</a>
 
-      </a>
+<a href="tel:+918717829368" class="contact-card">
+<small>Phone</small>
+<h4>+91 8717829368</h4>
+</a>
 
-      <a href="tel:+918717829368" class="contact-card">
 
-        <small>Phone</small>
-        <h4>
-          +91 8717829368
-        </h4>
+</div>
 
-      </a>
-
-      <a href="https://linkedin.com/in/harshit-edits" target="_blank" class="contact-card">
-
-        <small>LinkedIn</small>
-        <h4>
-          linkedin.com/in/harshit-edits
-        </h4>
-
-      </a>
-
-      <a href="https://wa.me/918717829368" target="_blank" class="contact-card">
-
-        <small>WhatsApp</small>
-        <h4>
-          Chat on WhatsApp
-        </h4>
-
-      </a>
-
-    </div>
-
-  </div>
+</div>
 
 </section>
 
 <footer>
 
-  <div class="container footer-inner">
+<div class="container footer-inner">
 
-    <p>
-      © 2026 Harshit Choubey
-    </p>
+<p>
+© 2026 Harshit Choubey
+</p>
 
-    <p>
-      Video Editor • YouTube • Reels • AI Content
-    </p>
+<p>
+Built For Full Time Video Editing Opportunities
+</p>
 
-  </div>
+</div>
 
 </footer>
+
+<script>
+
+const tabs = document.querySelectorAll(".tab-btn");
+const cards = document.querySelectorAll(".work-card");
+
+tabs.forEach(tab => {
+
+tab.addEventListener("click", () => {
+
+tabs.forEach(btn => btn.classList.remove("active"));
+
+tab.classList.add("active");
+
+const filter = tab.getAttribute("data-filter");
+
+cards.forEach(card => {
+
+if(filter === "all"){
+card.classList.remove("hide");
+}
+
+else if(card.classList.contains(filter)){
+card.classList.remove("hide");
+}
+
+else{
+card.classList.add("hide");
+}
+
+});
+
+});
+
+});
+
+</script>
 
 </body>
 </html>
